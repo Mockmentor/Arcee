@@ -1,0 +1,14 @@
+.Topic {
+  cursor: pointer;
+  width: 300px;
+  height: 30px;
+  font-family: 'Inter', sans-serif;
+  color: #03dac5;
+  background: #1c1c1c;
+  border-radius: 20px;
+  border: none;
+}
+
+.Topic:hover {
+  background-color: #2c2c2c;
+}

@@ -1,7 +1,15 @@
-import './App.css';
+import './styles/App.css';
+import { Route, Routes } from 'react-router-dom';
+import Topics from './pages/Topics';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Topics />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
