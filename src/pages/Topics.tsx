@@ -1,4 +1,5 @@
-import TopicList from './../components/TopicList/TopicList';
+import React from 'react';
+import TopicList from '../components/TopicList/TopicList';
 
 function Topics() {
   return (
