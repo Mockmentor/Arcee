@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles/App.css';
 import { Route, Routes } from 'react-router-dom';
 import Topics from './pages/Topics';

@@ -1,5 +1,4 @@
-import React from 'react';
-import Topic from '../Topic/Topic.jsx';
+import Topic from '../Topic/Topic';
 import classes from './TopicList.module.css';
 
 function TopicList({ topics }: { topics: string[] }) {

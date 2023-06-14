@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './Topic.module.css';
 
 function Topic({ text }: { text: string }) {
