@@ -6,9 +6,6 @@ function Chat() {
   return (
     <div>
       <BackgroundChat />
-      {/* <div>hi</div>
-      <div>ok</div>
-      <InputForm /> */}
     </div>
   );
 }

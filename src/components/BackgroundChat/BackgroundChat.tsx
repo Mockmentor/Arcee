@@ -1,6 +1,9 @@
 import classes from './BackgroundChat.module.css';
+import InputForm from '../InputForm/InputForm'
 
 export default function BackgroundChat() {
-  console.log(classes.BackgroundChat);
-  return <div className={classes.BackgroundChat}>ok</div>;
+  return <div className={classes.BackgroundChat}>
+    <div>ok</div>
+    <InputForm />
+  </div>;
 }
