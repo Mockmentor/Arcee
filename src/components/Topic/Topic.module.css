@@ -1,7 +1,8 @@
 .Topic {
   cursor: pointer;
-  width: 300px;
-  height: 30px;
+  width: 15vw;
+  height: 5vh;
+  font-size: 100%;
   font-family: 'Inter', sans-serif;
   color: #03dac5;
   background: #1c1c1c;

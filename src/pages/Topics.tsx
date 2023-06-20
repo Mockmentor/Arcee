@@ -12,7 +12,9 @@ function Topics() {
         alignItems: 'center',
       }}
     >
-      <p style={{ color: 'white' }}>Please, choose an interview topic:</p>
+      <p style={{ color: 'white', fontSize: '1.5rem' }}>
+        Please, choose an interview topic:
+      </p>
       <TopicList topics={['Machine Learning', 'Backend']} />
     </div>
   );
