@@ -1,9 +1,19 @@
 import classes from './BackgroundChat.module.css';
-import InputForm from '../InputForm/InputForm'
+import InputForm from '../InputForm/InputForm';
+import MessageList from '../MessageList/MessageList';
+import { useState } from 'react';
 
 export default function BackgroundChat() {
-  return <div className={classes.BackgroundChat}>
-    <div>ok</div>
-    <InputForm />
-  </div>;
+  const [messages, setMessages]: any = useState([]); // kill any
+
+  const createMessage = (newMessage: string) => {
+    setMessages([...messages, newMessage]);
+  };
+
+  return (
+    <div className={classes.BackgroundChat}>
+      <MessageList messages={messages} />
+      <InputForm create={createMessage} />
+    </div>
+  );
 }
