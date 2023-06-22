@@ -21,9 +21,10 @@ export default function InputForm({
         type="text"
         // placeholder="write here"
         style={{
+          outline: 'none',
           width: '50vw',
           lineHeight: '2em',
-          padding: '2px',
+          padding: '5px',
           borderRadius: '5px',
           border: '0',
           backgroundColor: '#373737',

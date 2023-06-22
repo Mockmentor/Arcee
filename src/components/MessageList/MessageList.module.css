@@ -1,4 +1,17 @@
 .MessageList {
-  display: grid;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px; */
+  /* grid-auto-rows: minmax(100wpx, auto); */
   color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.UserMessageList {
+  flex-grow: 1;
+  /* display: flex; */
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3vh;
 }
