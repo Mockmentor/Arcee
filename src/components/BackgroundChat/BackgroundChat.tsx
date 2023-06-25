@@ -7,7 +7,7 @@ export default function BackgroundChat() {
   const [messages, setMessages]: any = useState([]); // kill any
 
   const createMessage = (newMessage: string) => {
-    setMessages([...messages, newMessage]);
+    setMessages([newMessage, ...messages]);
   };
 
   return (
