@@ -11,7 +11,7 @@ export default function InputForm({
   const addNewMessage = (e: React.FormEvent) => {
     e.preventDefault();
     const newMessage = message;
-    create(newMessage);
+    if (newMessage) create(newMessage);
     setMessage('');
   };
 
