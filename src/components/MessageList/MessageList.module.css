@@ -1,10 +1,11 @@
 .MessageList {
-  color: white;
+  /* color: white; */
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
   gap: 3vh;
   overflow-y: auto;
+  padding-bottom: 2%;
 }
 
 .MessageList::-webkit-scrollbar {
