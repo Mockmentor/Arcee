@@ -9,10 +9,10 @@
 }
 
 .MessageList::-webkit-scrollbar {
-  width: 0.8vw;
+  width: 0vw;
 }
 
-.MessageList::-webkit-scrollbar-track {
+/* .MessageList::-webkit-scrollbar-track {
   background-color: #e4e4e4;
   border-radius: 40px;
 }
@@ -20,4 +20,4 @@
 .MessageList::-webkit-scrollbar-thumb {
   background-color: #d4aa70;
   border-radius: 40px;
-}
+}  */
