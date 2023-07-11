@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  run:
+    cmds:
+      - pm2 serve build/ 80 --spa
+
+  stop:
+    cmds:
+      - pm2 stop 0

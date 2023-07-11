@@ -1,7 +1,7 @@
 import { TopicEntity } from "../domain/topics.entities";
 
 export async function getTopics(): Promise<TopicEntity[]> {
-  const url = `${process.env.REACT_APP_OPITIMUS_PRIME_URL}/topics`;
+  const url = `${process.env.REACT_APP_OPTIMUS_PRIME_URL}/topics`;
 
   if (!url) {
     throw new Error("OPITIMUS_PRIME_URL is not defined");
