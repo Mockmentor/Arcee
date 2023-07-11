@@ -8,3 +8,8 @@ tasks:
   stop:
     cmds:
       - pm2 stop 0
+
+  restart:
+    cmds:
+      - task: stop
+      - task: run
