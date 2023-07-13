@@ -1,12 +1,17 @@
-import { useState } from 'react';
-import classes from './InputForm.module.css';
+import { useEffect, useRef, useState } from 'react';
+import styles from './InputForm.module.css';
 
-export default function InputForm({
-  create,
-}: {
+interface Props {
   create: (newMessage: string) => void;
-}) {
+}
+
+export default function InputForm({ create }: Props) {
   const [message, setMessage] = useState('');
+
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  useEffect(() => {
+    inputRef.current?.focus();
+  });
 
   const addNewMessage = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,18 +23,9 @@ export default function InputForm({
   return (
     <form>
       <input
+        className={styles.input}
         type="text"
-        // placeholder="write here"
-        style={{
-          outline: 'none',
-          width: '50vw',
-          lineHeight: '2em',
-          padding: '5px',
-          borderRadius: '5px',
-          border: '0',
-          backgroundColor: '#373737',
-          color: '#ffffff',
-        }}
+        ref={inputRef}
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />

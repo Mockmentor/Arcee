@@ -1,10 +1,19 @@
 import styles from './Message.module.css';
 
-export default function Message({ message }: { message: string }) {
+export default function Message({
+  message,
+  index,
+}: {
+  message: string;
+  index: number;
+}) {
   return (
     <>
-      <div className={styles.MessageAI}> u sure?</div>
-      <div className={styles.Message}>{message}</div>
+      {index % 2 == 0 ? (
+        <div className={styles.MessageAI}>{message}</div>
+      ) : (
+        <div className={styles.Message}>{message}</div>
+      )}
     </>
   );
 }

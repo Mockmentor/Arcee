@@ -1,10 +1,10 @@
 .input {
-  /* display: 'block';
-  width: '100%'; */
-  line-height: '2em';
-  padding: '2px';
-  border-radius: '10px';
-  border: '0';
-  background-color: '#373737';
-  color: '#ffffff';
+  outline: none;
+  width: 50vw;
+  line-height: 2em;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #373737;
+  color: #ffffff;
 }
