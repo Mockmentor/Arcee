@@ -1,7 +1,8 @@
 .MessageList {
   /* color: white; */
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: flex-end;
   gap: 3vh;
   overflow-y: auto;

@@ -13,7 +13,7 @@ export default function BackgroundChat({ room_uuid }: { room_uuid: number }) {
   };
 
   const createMessage = (newMessage: string) => {
-    setMessages([newMessage, ...messages]);
+    setMessages([...messages, newMessage]);
   };
 
   const createAIMessage = (newAIMessage: string) => {
