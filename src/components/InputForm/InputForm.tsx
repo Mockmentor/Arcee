@@ -3,9 +3,10 @@ import styles from './InputForm.module.css';
 
 interface Props {
   create: (newMessage: string) => void;
+  toggle: (toggle: number) => void;
 }
 
-export default function InputForm({ create }: Props) {
+export default function InputForm({ create, toggle }: Props) {
   const [message, setMessage] = useState('');
 
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -18,6 +19,7 @@ export default function InputForm({ create }: Props) {
     const newMessage = message;
     if (newMessage) create(newMessage);
     setMessage('');
+    toggle(1);
   };
 
   return (

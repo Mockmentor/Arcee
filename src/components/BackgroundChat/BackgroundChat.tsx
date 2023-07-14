@@ -7,6 +7,11 @@ export default function BackgroundChat({ room_uuid }: { room_uuid: number }) {
   const [messages, setMessages] = useState<string[]>([]);
   const [aiMessages, setAIMessages] = useState<string[]>([]);
 
+  const [toggle, setToggle] = useState<number>(0);
+  const changeToggle = (toggle: number) => {
+    setToggle(toggle + 1);
+  };
+
   const createMessage = (newMessage: string) => {
     setMessages([newMessage, ...messages]);
   };
@@ -36,10 +41,10 @@ export default function BackgroundChat({ room_uuid }: { room_uuid: number }) {
       // if (isPaused) return;
       // const message = JSON.parse(e.data);
       // setAIMessages(e.data);
-      createAIMessage(e.data);
+      createMessage(e.data);
       console.log('question mes:', e.data);
     };
-  }, [messages]);
+  }, [toggle]);
 
   /* When user sends a message in the inputform, useEffect gets triggered. */
   useEffect(() => {
@@ -49,12 +54,12 @@ export default function BackgroundChat({ room_uuid }: { room_uuid: number }) {
       socket.current?.send(mes);
       console.log(mes);
     }
-  }, [messages]);
+  }, [toggle]);
 
   return (
     <div className={classes.BackgroundChat}>
-      <MessageList messages={messages} aiMessages={aiMessages} />
-      <InputForm create={createMessage} />
+      <MessageList messages={messages} />
+      <InputForm create={createMessage} toggle={changeToggle} />
     </div>
   );
 }
