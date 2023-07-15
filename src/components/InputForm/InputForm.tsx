@@ -1,12 +1,13 @@
+import { MessageEntity } from '../../domain/messages.entities';
 import { useEffect, useRef, useState } from 'react';
 import styles from './InputForm.module.css';
 
 interface Props {
-  create: (newMessage: string) => void;
-  toggle: (toggle: number) => void;
+  send: (mes: string) => void;
+  create: (newMessage: MessageEntity) => void;
 }
 
-export default function InputForm({ create, toggle }: Props) {
+export default function InputForm({ send, create }: Props) {
   const [message, setMessage] = useState('');
 
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -16,10 +17,10 @@ export default function InputForm({ create, toggle }: Props) {
 
   const addNewMessage = (e: React.FormEvent) => {
     e.preventDefault();
-    const newMessage = message;
+    const newMessage: MessageEntity = { text: message, type: true };
     if (newMessage) create(newMessage);
+    send(message);
     setMessage('');
-    toggle(1);
   };
 
   return (

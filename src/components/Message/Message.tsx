@@ -2,14 +2,14 @@ import styles from './Message.module.css';
 
 export default function Message({
   message,
-  index,
+  type,
 }: {
   message: string;
-  index: number;
+  type: boolean;
 }) {
   return (
     <>
-      {index % 2 == 0 ? (
+      {type == false ? (
         <div className={styles.MessageAI}>{message}</div>
       ) : (
         <div className={styles.Message}>{message}</div>
