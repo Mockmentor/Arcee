@@ -23,16 +23,25 @@ export default function InputForm({ send, create }: Props) {
     setMessage('');
   };
 
+  const sendAudio = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
-    <form>
-      <input
-        className={styles.input}
-        type="text"
-        ref={inputRef}
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
-      <input type="submit" onClick={addNewMessage} hidden />
-    </form>
+    <div className={styles.area}>
+      <form>
+        <input
+          className={styles.input}
+          type="text"
+          ref={inputRef}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+        <input type="submit" onClick={addNewMessage} hidden />
+      </form>
+      <button onClick={sendAudio} className={styles.button}>
+        !
+      </button>
+    </div>
   );
 }

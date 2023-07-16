@@ -1,3 +1,8 @@
+.area {
+  display: grid;
+  grid-template-columns: 92% 1fr;
+}
+
 .input {
   outline: none;
   width: 50vw;
@@ -7,4 +12,16 @@
   border: 0;
   background-color: #373737;
   color: #ffffff;
+}
+
+.button {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.button:hover {
+  background-color: #555555;
+  color: white;
 }
