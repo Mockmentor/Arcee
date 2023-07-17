@@ -1,6 +1,7 @@
 import { MessageEntity } from '../../domain/messages.entities';
 import { useEffect, useRef, useState } from 'react';
 import styles from './InputForm.module.css';
+import AudioRecorder from '../AudioRecorder/AudioRecorder.jsx';
 
 interface Props {
   send: (mes: string) => void;
@@ -33,15 +34,15 @@ export default function InputForm({ send, create }: Props) {
         <input
           className={styles.input}
           type="text"
+          maxLength={300}
           ref={inputRef}
           value={message}
+          readOnly={false}
           onChange={(e) => setMessage(e.target.value)}
         />
         <input type="submit" onClick={addNewMessage} hidden />
       </form>
-      <button onClick={sendAudio} className={styles.button}>
-        !
-      </button>
+      <AudioRecorder send={send} />
     </div>
   );
 }

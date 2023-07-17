@@ -2,11 +2,16 @@
   /* color: white; */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: flex-end;
   gap: 3vh;
   overflow-y: auto;
   padding-bottom: 2%;
+}
+
+.MessageList > :first-child {
+  margin-top: auto !important;
+  /* use !important to prevent breakage from child margin settings */
 }
 
 .MessageList::-webkit-scrollbar {

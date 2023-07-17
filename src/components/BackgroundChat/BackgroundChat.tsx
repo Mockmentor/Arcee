@@ -34,7 +34,7 @@ export default function BackgroundChat({ room_uuid }: { room_uuid: number }) {
     };
   }, [messages]);
 
-  const sendMessage = (mes: string) => {
+  const sendMessage = (mes: string | Blob) => {
     socket.current?.send(mes);
   };
 
