@@ -28,9 +28,23 @@ export default function BackgroundChat({ room_uuid }: { room_uuid: number }) {
   useEffect(() => {
     if (!socket.current) return;
     socket.current.onmessage = (e) => {
-      const message: MessageEntity = { text: e.data, type: false };
-      createMessage(message);
-      console.log('question mes:', e.data);
+      console.log(e);
+      const obj = JSON.parse(e.data);
+      // console.log(obj);
+
+      if (obj.mtype === 'correctness') {
+        const message: MessageEntity = { text: obj.text, type: false };
+        createMessage(message);
+        // console.log('question mes:', e.data);
+      } else if (obj.mtype === 'textify') {
+        // console.log(obj);
+        const message: MessageEntity = { text: obj.text, type: true };
+        createMessage(message);
+        // console.log('question mes:', e.data);
+      } else if (obj.mtype === 'question') {
+        const message: MessageEntity = { text: obj.text, type: false };
+        createMessage(message);
+      }
     };
   }, [messages]);
 
