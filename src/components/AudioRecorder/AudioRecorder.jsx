@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
-import styles from '../InputForm/InputForm.module.css';
+// import styles from '../InputForm/InputForm.module.css';
+import styles from '../AudioRecorder/AudioRecorder.module.css';
 const mimeType = 'audio/wav';
 
 const AudioRecorder = ({ send }) => {
@@ -64,18 +65,35 @@ const AudioRecorder = ({ send }) => {
   return (
     <div className="audio-controls">
       {!permission ? (
-        <button onClick={getMicrophonePermission} type="button">
-          Get Microphone
+        <button className={styles.mike} onClick={getMicrophonePermission} type="button">
+          <svg className={styles.icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19C15.31 19 18 16.31 18 13V8C18 4.69 15.31 2 12 2C8.69 2 6 4.69 6 8V13C6 16.31 8.69 19 12 19Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 11V13C3 17.97 7.03 22 12 22C16.97 22 21 17.97 21 13V11" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.10999 7.47993C10.89 6.82993 12.83 6.82993 14.61 7.47993" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.03 10.4799C11.23 10.1499 12.5 10.1499 13.7 10.4799" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>  
         </button>
       ) : null}
       {permission && recordingStatus === 'inactive' ? (
-        <button onClick={startRecording} type="button">
-          Start Recording
+        <button className={styles.mike} onClick={startRecording} type="button">
+          <svg className={styles.icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19C15.31 19 18 16.31 18 13V8C18 4.69 15.31 2 12 2C8.69 2 6 4.69 6 8V13C6 16.31 8.69 19 12 19Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 11V13C3 17.97 7.03 22 12 22C16.97 22 21 17.97 21 13V11" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.10999 7.47993C10.89 6.82993 12.83 6.82993 14.61 7.47993" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.03 10.4799C11.23 10.1499 12.5 10.1499 13.7 10.4799" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </button>
       ) : null}
       {recordingStatus === 'recording' ? (
-        <button onClick={stopRecording} type="button">
-          Stop Recording
+        <button className={styles.mike} onClick={stopRecording} type="button">
+          <svg className={styles.icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.82 6.53C17.16 3.93 14.81 2 12 2C8.69 2 6 4.69 6 8V13C6 14.46 6.52 15.8 7.39 16.84" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 9.97998V13C18 16.31 15.31 19 12 19C11.27 19 10.56 18.87 9.92004 18.63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.85999 19.58C7.46999 21.08 9.62999 22 12 22C16.97 22 21 17.97 21 13V11" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21.5 2.99023L2.5 21.9902" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11.55 5.49977V2.25977" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8.5 3.5V7.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </button>
       ) : null}
 

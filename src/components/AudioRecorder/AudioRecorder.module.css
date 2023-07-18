@@ -1,0 +1,18 @@
+.mike {
+    padding-right: 1.2em;
+    padding-top: 0.35em;
+    height: 3.6em;
+    border-radius: 0 15px 15px 0;
+    border: 0;
+    background-color: #0e0e10;
+}
+
+.icon {
+    stroke: #018786;
+}
+
+.icon:hover {
+    cursor: pointer;
+    stroke: aqua;
+}
+

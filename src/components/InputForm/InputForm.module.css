@@ -1,27 +1,23 @@
 .area {
-  display: grid;
-  grid-template-columns: 92% 1fr;
+  display: flex;
+  height: 3em;
+  border-radius: 15px;
+  border: 1px solid #017374;
+  padding-left: 1em;
 }
 
 .input {
   outline: none;
   width: 50vw;
-  line-height: 2em;
+  /* line-height: 2em; */
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 15px 0 0 15px;
+  /* border: 1px solid #017374; */
   border: 0;
-  background-color: #373737;
-  color: #ffffff;
+  background-color: #0e0e10;
+  color: #D0CDFA;
 }
 
-.button {
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition-duration: 0.2s;
-}
-
-.button:hover {
-  background-color: #555555;
-  color: white;
+.area:focus-within, .area:hover{
+  border: 1.4px solid #019592;
 }

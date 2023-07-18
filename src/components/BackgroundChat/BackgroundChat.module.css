@@ -1,8 +1,10 @@
 .BackgroundChat {
   height: 90vh;
   width: 70vw;
-  background-color: #1c1c1c;
+  background-color: #0e0e10;
   border-radius: 2%;
+  border: 1px solid #005457;
+
 
   position: absolute;
   left: 0;

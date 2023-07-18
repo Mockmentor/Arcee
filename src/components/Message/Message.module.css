@@ -1,20 +1,29 @@
 .Message {
-  background-color: rgba(114, 105, 226, 50%);
+  color: #e9eafd;
+  background-color: #1b1e3c;
   border-radius: 10px 10px 0px 10px;
-  padding: 1vh;
+  padding-top: 0.75vh;
+  padding-bottom: 1vh;
+  padding-left: 1vh;
+  padding-right: 2vh;
   flex-basis: 5%;
-  inline-size: 25vh;
+  inline-size: auto;
+  max-width: 42.5vh;
   overflow-wrap: break-word;
-  color: #d0cdfa;
 }
 
 .MessageAI {
-  background-color: #232834;
+  /* width: 50%; */
+  color: #f3f3f4;
+  background-color: #1e1f28;
   border-radius: 10px 10px 10px 0px;
-  padding: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 2vh;
+  padding-right: 1vh;
   flex-basis: 5%;
-  inline-size: 25vh;
+  inline-size: auto;
+  max-width: 42.5vh;
   overflow-wrap: break-word;
   align-self: flex-start;
-  color: #dedfe3cc;
 }

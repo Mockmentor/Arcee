@@ -29,10 +29,10 @@ export default function InputForm({ send, create }: Props) {
   };
 
   return (
-    <div className={styles.area}>
-      <form>
+      <form className={styles.area}>
         <input
           className={styles.input}
+          placeholder="..."
           type="text"
           maxLength={300}
           ref={inputRef}
@@ -40,9 +40,8 @@ export default function InputForm({ send, create }: Props) {
           readOnly={false}
           onChange={(e) => setMessage(e.target.value)}
         />
+        <AudioRecorder send={send} />
         <input type="submit" onClick={addNewMessage} hidden />
       </form>
-      <AudioRecorder send={send} />
-    </div>
   );
 }
