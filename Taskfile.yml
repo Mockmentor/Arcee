@@ -3,6 +3,7 @@ version: '3'
 tasks:
   run:
     cmds:
+      # - pm2 serve build/ 6000 --spa
       - pm2 serve build/ 80 --spa
 
   stop:
