@@ -10,7 +10,7 @@ function TopicList({ topics }: { topics: TopicEntity[] }) {
   const handleTopicClick = async (topic_id: number) => {
     try {
       const room = await createRoom({ topicId: topic_id });
-      // console.log('Room created:', room);
+      console.log('Room created:', room);
       navigate('chat', { state: { room: room } });
     } catch (error) {
       console.error('Error creating room:', error);

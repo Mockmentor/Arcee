@@ -13,7 +13,7 @@ export default function BackgroundChat({ room_uuid }: { room_uuid: number }) {
 
   const socket = useRef<WebSocket>();
   useEffect(() => {
-    socket.current = new WebSocket(`ws://mockmentor.ru:8000/rooms/${room_uuid}`);
+    socket.current = new WebSocket(`ws://localhost:8000/rooms/${room_uuid}`);
     socket.current.onopen = () => console.log('ws opened');
     socket.current.onclose = () => console.log('ws closed');
 
